@@ -7,11 +7,7 @@ int main() {
     int score;
     cin >> score;
 
-    if(score == 100){
-        cout << "pass" << endl;
-    }
-    else
-        cout << "failure" << endl;
+    cout << ((score == 100) ? "pass" : "failure") << endl;
     
     return 0;
 }
