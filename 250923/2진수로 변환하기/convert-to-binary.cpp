@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -8,19 +9,15 @@ int main() {
     cin >> n;
 
     // Please write your code here.
-    int digits[20];
-    int cnt = 0;
-    while(true){
-        if(n < 2){
-            digits[cnt++] = n;
-            break;
-        }
-        digits[cnt++] = n % 2;
+    vector<int> digits;
+    while(n > 1){
+        digits.push_back(n % 2);
         n /= 2;
     }
+    digits.push_back(n);
 
 
-    for(int i = cnt - 1; i >= 0; i--){
+    for(int i = digits.size() - 1; i >= 0; i--){
         cout << digits[i];
     }
 
