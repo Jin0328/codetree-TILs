@@ -23,8 +23,10 @@ int main() {
     for(int i = 0; i < n; i++){
         for(int k = x1[i]; k < x2[i]; k++){
             for(int j = y1[i]; j < y2[i]; j++){
-                if(count % 2 == 1){ // 빨간색
+                if(count % 2 == 1){ // 파란색
                     square[k][j] = 1;
+                } else {
+                    square[k][j] = 2; // 빨간색
                 }
             }
         }
