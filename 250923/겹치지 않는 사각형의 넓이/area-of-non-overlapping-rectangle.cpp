@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define OFFSET 1000;
+
 int x1[3], y1[3];
 int x2[3], y2[3];
 
@@ -15,6 +17,7 @@ int main() {
     // Please write your code here.
     int count = 0;
     for(int k = 0; k < 2; k++){
+        x1[k] += OFFSET; x2[k] += OFFSET; y1[k] += OFFSET; y2[k] += OFFSET;
         for(int i = x1[k]; i < x2[k]; i++){
             for(int j = y1[k]; j < y2[k]; j++){
                 square[i][j] = 1;
