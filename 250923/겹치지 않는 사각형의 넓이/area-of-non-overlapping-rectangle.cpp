@@ -16,8 +16,11 @@ int main() {
 
     // Please write your code here.
     int count = 0;
+    for(int i = 0; i < 3; i++){
+        x1[i] += OFFSET; x2[i] += OFFSET; y1[i] += OFFSET; y2[i] += OFFSET;
+    }
+
     for(int k = 0; k < 2; k++){
-        x1[k] += OFFSET; x2[k] += OFFSET; y1[k] += OFFSET; y2[k] += OFFSET;
         for(int i = x1[k]; i < x2[k]; i++){
             for(int j = y1[k]; j < y2[k]; j++){
                 square[i][j] = 1;
