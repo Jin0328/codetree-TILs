@@ -37,7 +37,7 @@ int main() {
         }
 
         if(infected[y] && !infected[x] && (cnt[y] < K)){
-            infected[y] = true;
+            infected[x] = true;
             cnt[y]++;
         }
     }
