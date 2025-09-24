@@ -31,14 +31,21 @@ int main() {
         int x = iter.x;
         int y = iter.y;
 
-        if(infected[x] && !infected[y] && (cnt[x] < K)){
-            infected[y] = true;
+        if(infected[x]){
             cnt[x]++;
         }
 
-        if(infected[y] && !infected[x] && (cnt[y] < K)){
-            infected[x] = true;
+        if(infected[y]){
             cnt[y]++;
+        }
+
+        if(infected[x] && !infected[y] && (cnt[x] <= K)){
+            infected[y] = true;
+        }
+
+
+        if(infected[y] && !infected[x] && (cnt[y] <= K)){
+            infected[x] = true;
         }
     }
 
