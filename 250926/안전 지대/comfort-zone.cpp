@@ -47,7 +47,7 @@ int main() {
         }
     }
 
-    int max_village = 0, answer = 0;
+    int max_village = 0, answer = 1;
     for(int k = 1; k < 100; k++){
         memset(visited, false, sizeof(visited));
         int count = 0;
